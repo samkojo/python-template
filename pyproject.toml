@@ -8,6 +8,8 @@ authors = ["Samuel <fujimoto.samuel@gmail.com>"]
 python = "^3.9.12"
 
 [tool.poetry.dev-dependencies]
+blue = "^0.9.0"
+isort = "^5.10.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
