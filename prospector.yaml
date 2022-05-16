@@ -1,0 +1,15 @@
+strictness: high
+doc-warnings: false
+test-warnings: false
+autodetect: false
+member-warnings: false
+max-line-length: 79
+
+mypy:
+  run: true
+  options:
+    ignore-missing-imports: true
+    follow-imports: skip
+
+bandit:
+  run: true
