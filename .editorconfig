@@ -1,0 +1,28 @@
+# EditorConfig is awesome: https://EditorConfig.org
+# Wiki: https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
+
+# Referencias:
+# https://github.com/python/cpython/blob/main/.editorconfig
+# https://github.com/django/django/blob/main/.editorconfig
+# https://github.com/NLeSC/python-template/blob/main/.editorconfig
+# https://github.com/trailofbits/pip-audit/blob/main/.editorconfig
+root = true
+
+# Configuracao geral para todos arquivos com identacao menor de 2 espacos
+# removento espacos em branco no final da linha
+# sempre deixando um linha em branco no final do arquivo
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+
+# Para arquivos Python deixei o padrao PEP8 de identacao com 4 espacos
+[*.py]
+indent_style = space
+indent_size = 4
+
+[Makefile]
+indent_style = tab
