@@ -245,9 +245,78 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ferramentas-e-configuracoes-utilizadas" class="md-nav__link">
-    Ferramentas e configurações utilizadas
+  <a href="#iniciando-projeto-passo-a-passo" class="md-nav__link">
+    Iniciando projeto passo a passo
   </a>
+  
+    <nav class="md-nav" aria-label="Iniciando projeto passo a passo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editorconfig" class="md-nav__link">
+    EditorConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitignore" class="md-nav__link">
+    gitignore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyenv" class="md-nav__link">
+    Pyenv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poetry" class="md-nav__link">
+    Poetry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lint" class="md-nav__link">
+    Lint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytest" class="md-nav__link">
+    Pytest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety" class="md-nav__link">
+    Safety
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs" class="md-nav__link">
+    Mkdocs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    Makefile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -341,9 +410,78 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ferramentas-e-configuracoes-utilizadas" class="md-nav__link">
-    Ferramentas e configurações utilizadas
+  <a href="#iniciando-projeto-passo-a-passo" class="md-nav__link">
+    Iniciando projeto passo a passo
   </a>
+  
+    <nav class="md-nav" aria-label="Iniciando projeto passo a passo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editorconfig" class="md-nav__link">
+    EditorConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitignore" class="md-nav__link">
+    gitignore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyenv" class="md-nav__link">
+    Pyenv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poetry" class="md-nav__link">
+    Poetry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lint" class="md-nav__link">
+    Lint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytest" class="md-nav__link">
+    Pytest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety" class="md-nav__link">
+    Safety
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs" class="md-nav__link">
+    Mkdocs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    Makefile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -364,13 +502,176 @@
 <h1 id="template-python">Template Python</h1>
 <p>Projeto para template python.</p>
 <h2 id="overview">Overview</h2>
-<p>A ideia é listarmos todas ferramentas que serão utilizadas, bem como os 
+<p>A ideia é listarmos todas ferramentas que serão utilizadas, bem como os
 detalhes de instalação e uso.</p>
-<h2 id="ferramentas-e-configuracoes-utilizadas">Ferramentas e configurações utilizadas</h2>
-<ol>
-<li>[Pyenv]</li>
-<li><a href="tools/poetry/">Poetry</a></li>
-</ol>
+<h2 id="iniciando-projeto-passo-a-passo">Iniciando projeto passo a passo</h2>
+<h3 id="editorconfig">EditorConfig</h3>
+<p>Para padronizarmos estilo de codificação de arquivos.</p>
+<p>Como exemplo de configuracao do <code>.editorconfig</code>:</p>
+<pre><code># EditorConfig is awesome: https://EditorConfig.org
+# Wiki: https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
+
+# Referencias:
+# https://github.com/python/cpython/blob/main/.editorconfig
+# https://github.com/django/django/blob/main/.editorconfig
+# https://github.com/NLeSC/python-template/blob/main/.editorconfig
+# https://github.com/trailofbits/pip-audit/blob/main/.editorconfig
+root = true
+
+# Configuracao geral para todos arquivos com identacao menor de 2 espacos
+# removento espacos em branco no final da linha
+# sempre deixando um linha em branco no final do arquivo
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+
+# Para arquivos Python deixei o padrao PEP8 de identacao com 4 espacos
+[*.py]
+indent_style = space
+indent_size = 4
+
+[Makefile]
+indent_style = tab
+</code></pre>
+<h3 id="gitignore">gitignore</h3>
+<p>Para definirmos arquivos que não devem ser comitados por padrao.</p>
+<p>Como base podemos utilizar a geração do <code>.gitignore</code> desse <a href="https://www.toptal.com/developers/gitignore/">gerador</a> adicionando como parametro <code>python</code> por exemplo.</p>
+<h3 id="pyenv">Pyenv</h3>
+<p>Para gerenciar versões de python.
+<em>Necessário a <a href="https://github.com/pyenv/pyenv#installation">instalação</a> para utilizacao</em></p>
+<p>Primeiro instalamos a versão que queremos utilizar, como exemplo Python 3.9.12</p>
+<pre><code>pyenv install 3.9.12
+</code></pre>
+<p>Na raiz do projeto podemos definir que iremos utilizar essa versão</p>
+<pre><code>pyenv local 3.9.12
+</code></pre>
+<h3 id="poetry">Poetry</h3>
+<p>Nosso gerenciador de pacotes e dependencias.
+<em>Necessário a <a href="https://python-poetry.org/docs/#installation">instalação</a> para utilizacao</em></p>
+<p>Iniciamos o poetry no nosso projeto</p>
+<pre><code>poetry init -n
+</code></pre>
+<p>Para respeitarmos a versão que definimos no pyenv conferir e corrigir se necessário a versão do python no arquivo <code>pyproject.toml</code> e trecho <code>[tool.poetry.dependencies]</code>.</p>
+<p>Por exemplo:</p>
+<pre><code>[tool.poetry.dependencies]
+python = &quot;^3.9.12&quot;
+</code></pre>
+<p>Instalamos para iniciar o ambiente virtual</p>
+<pre><code>poetry install
+</code></pre>
+<p>Acessamos o shell poetry, para podemos utilizar o projeto</p>
+<pre><code>poetry shell
+</code></pre>
+<h3 id="lint">Lint</h3>
+<p>Como formatadores de codigo podemos utilizar o blue e isort.</p>
+<p>Para instalar:</p>
+<pre><code>poetry add blue -D
+poetry add isort -D
+</code></pre>
+<p>Como analise de codigo podemos utilizar o prospector com mypy.</p>
+<p>Para instalar:</p>
+<pre><code>poetry add prospector -D
+poetry add mypy -D
+</code></pre>
+<p>Verificar problema de seguranca comuns no codigo.</p>
+<hr />
+<p>Para instação:</p>
+<pre><code>poetry add bandit -D
+</code></pre>
+<p>Podemos configurar o prospector com um arquivo <code>prospector.yaml</code> na raiz do projeto.
+Como exemplo:</p>
+<pre><code>strictness: high
+doc-warnings: false
+test-warnings: false
+autodetect: false
+member-warnings: false
+max-line-length: 79
+
+mypy:
+  run: true
+  options:
+    ignore-missing-imports: true
+    follow-imports: skip
+
+bandit:
+  run: true
+</code></pre>
+<h3 id="pytest">Pytest</h3>
+<p>Ferramenta para teste.</p>
+<p>Para instalação:</p>
+<pre><code>poetry add pytest -D
+</code></pre>
+<h3 id="safety">Safety</h3>
+<p>Verificador de vunerabilidades de dependencias.</p>
+<p>Para instalação:</p>
+<pre><code>poetry add safety -D
+</code></pre>
+<h3 id="mkdocs">Mkdocs</h3>
+<p>Ferramenta para documentação</p>
+<p>Para instalação:</p>
+<pre><code>poetry add mkdocs -D
+</code></pre>
+<p>Para iniciar a documentação com mkdocs no projeto:</p>
+<pre><code>mkdocs new .
+</code></pre>
+<p>Para instalacao extensoes e temas utilizados nesse exemplo:</p>
+<pre><code>poetry add pymdown-extensions -D
+poetry add mkdocs-material -D
+</code></pre>
+<p>Ativamos a extensao atraves do arquivo <code>mkdocs.yml</code> como exemplo:</p>
+<pre><code>site_name: Template Python
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue grey
+      toggle:
+        icon: material/weather-night
+        name: Modo noturno
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+
+
+markdown_extensions:
+  - pymdownx.tasklist  # Lista de tarefas
+  - pymdownx.emoji  # Emojis
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.highlight
+</code></pre>
+<h3 id="makefile">Makefile</h3>
+<p>Para facilitarmos no desenvolvimento do projeto, criamos scripts para organizarmos algumas tarefas comuns.</p>
+<p>Como exemplo temos o <code>Makefile</code> com base nas ferramentas apresentadas:</p>
+<pre><code>.PHONY: install
+install:
+    @poetry install
+
+.PHONY: format
+format:
+    @blue .
+    @isort .
+
+.PHONY: lint
+lint:
+    @blue --check .
+    @isort --check .
+    @prospector
+
+.PHONY: test
+test:
+    @pytest . -v
+
+.PHONY: check
+check:
+    @safety check
+</code></pre>
 
               
             </article>
